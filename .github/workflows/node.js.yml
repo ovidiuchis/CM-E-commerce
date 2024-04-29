@@ -10,10 +10,13 @@ on:
     branches: [ "main" ]
 
 jobs:
+
   build:
 
     runs-on: ubuntu-latest
-
+    defaults:
+       run:
+         working-directory: ./node_modules/
     strategy:
       matrix:
         node-version: [20.x]
